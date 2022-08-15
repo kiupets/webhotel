@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Container } from './components/Container/Container';
+import { Provider } from './context/ThumbContext';
+import { Provider as DatesProvider } from './context/DatesContext';
+import { Provider as FormProvider } from './context/FormContext';
+import { Provider as IdProvider } from './context/IdContext';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+	return (
+		<IdProvider>
+			<FormProvider>
+				<DatesProvider>
+					<Provider>
+						<Container />
+					</Provider>
+				</DatesProvider>
+			</FormProvider>
+		</IdProvider>
+	);
 }
-
-export default App;

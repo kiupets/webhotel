@@ -1,0 +1,17 @@
+.grid-container {
+    display: grid;
+    /* grid-auto-flow: column; */
+
+
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    border: 1px solid black;
+    /* width: 100%; */
+
+}
